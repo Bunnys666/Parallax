@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+
+<style>
+    .front
+    {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: white;
+    }
+    
+    .back {
+        width: 120%;
+        height: 120%;
+        left: -10%;
+        top: -10%;
+        position: absolute;
+        background: url(img/2.jpg);
+        background-size: cover;
+    }
+
+
+
+</style>
+<body>
+        
+        <div class="front">
+            <div class="back"></div>
+        </div>  
+        
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            var windowWidth = $(window).width();
+
+            $('.front').mousemove(function(event){
+                var moveX = (($(window).width() / 2)- event.pageX)* 0.1;
+                var moveY = (($(window).width() / 2)- event.pageY)* 0.1;
+
+                $('.back').css('margin-left', moveX + 'px');
+                $('.back').css('margin-top', moveY + 'px');
+
+            });
+        
+        </script>
+</body>
+</html>
