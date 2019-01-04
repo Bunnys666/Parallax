@@ -1,4 +1,4 @@
-this is example how to use parallax with javascript.
+this is example how to use parallax with javascript with move cursor
 
 this is a CDN
  
